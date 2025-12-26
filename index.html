@@ -513,7 +513,7 @@
             palmCenter: { x: 0.5, y: 0.5 },
             hasPalmCenter: false,
             starMesh: null,
-            letterContent: "亲爱的臧宝宝：\n\n2025是与你共同度过的第一个年，往后时光，我都想牢牢牵着你的手一起过。遇见可爱又乐观的你，是我读博以来最幸福的事情，我想把这整片星空都摘下来送给你。\n\n愿我的臧宝宝每一天都如新年夜的万家灯火一般，温暖明亮，被爱环绕，永远闪闪发光，自带温柔暖意，眼里有光，心里有甜，岁岁无忧，日日明朗。\n\n新年快乐！\n\n永远爱你的，乖乖",
+            letterContent: "亲爱的臧宝宝：\n\n2025是与你共同度过的第一年，往后时光，我都想牢牢牵着你的手一起过。遇见可爱又乐观的你，是我读博以来最幸福的事情，我想把这整片星空都摘下来送给你。\n\n愿我的臧宝宝每一天都如新年夜的万家灯火一般，温暖明亮，被爱环绕，永远闪闪发光，自带温柔暖意，眼里有光，心里有甜，岁岁无忧，日日明朗。\n\n新年快乐！\n\n永远爱你的，乖乖",
             letterTyper: null,
             letterStartTimer: null,
 
@@ -634,7 +634,7 @@
         }
         function setupPostProcessing() {
             const renderScene = new RenderPass(scene, camera);
-            const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85); bloomPass.threshold = 0.7; bloomPass.strength = 0.6; bloomPass.radius = 0.5;
+            const bloomPass = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 1.5, 0.4, 0.85); bloomPass.threshold = 0.85; bloomPass.strength = 0.35; bloomPass.radius = 0.25; // bloomPass.threshold = 0.7; bloomPass.strength = 0.6; bloomPass.radius = 0.5
             composer = new EffectComposer(renderer); composer.addPass(renderScene); composer.addPass(bloomPass);
         }
 
