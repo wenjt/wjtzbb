@@ -438,7 +438,7 @@
 
     <div id="love-timer-container">
         <div class="love-text" id="love-timer-text">
-            与臧宝宝相恋的第 <span class="love-time-numbers">0</span> 天
+            与臧宝宝在一起的第 <span class="love-time-numbers">0</span> 天
             <span class="love-time-numbers">0</span> 时
             <span class="love-time-numbers">0</span> 分
             <span class="love-time-numbers">0</span> 秒
@@ -450,7 +450,7 @@
     <div id="ui-layer">
         <div id="top-right-controls">
             <button id="btn-toggle-camera" class="control-btn active">关闭摄像头</button>
-            <button id="btn-slideshow" class="control-btn">相册巡演</button>
+            <button id="btn-slideshow" class="control-btn">点滴瞬间</button>
             <button id="btn-fullscreen" class="control-btn">全屏显示</button>
         </div>
     </div>
@@ -529,7 +529,7 @@
             webcamResize: {
                 isResizing: false,
                 startX: 0,
-                startWidth: 280
+                startWidth: 200
             }
         };
 
@@ -595,7 +595,7 @@
                 const hour = Math.floor((safeDiff / (1000 * 60 * 60)) % 24);
                 const min = Math.floor((safeDiff / (1000 * 60)) % 60);
                 const sec = Math.floor((safeDiff / 1000) % 60);
-                timerEl.innerHTML = `与臧宝宝相恋的第 <span class="love-time-numbers">${day}</span> 天 <span class="love-time-numbers">${hour}</span> 时 <span class="love-time-numbers">${min}</span> 分 <span class="love-time-numbers">${sec}</span> 秒`;
+                timerEl.innerHTML = `与臧宝宝在一起的第 <span class="love-time-numbers">${day}</span> 天 <span class="love-time-numbers">${hour}</span> 时 <span class="love-time-numbers">${min}</span> 分 <span class="love-time-numbers">${sec}</span> 秒`;
                 requestAnimationFrame(update);
             }
             update();
@@ -1065,7 +1065,7 @@
             if (slideshowBtn) {
                 slideshowBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    if (STATE.mode === 'SLIDESHOW') { STATE.mode = 'TREE'; slideshowBtn.classList.remove('active'); slideshowBtn.textContent = '相册巡演'; }
+                    if (STATE.mode === 'SLIDESHOW') { STATE.mode = 'TREE'; slideshowBtn.classList.remove('active'); slideshowBtn.textContent = '点滴瞬间'; }
                     else { STATE.mode = 'SLIDESHOW'; slideshowBtn.classList.add('active'); slideshowBtn.textContent = '退出巡演'; }
                 });
             }
